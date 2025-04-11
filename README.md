@@ -1,3 +1,1 @@
-# 3dfixup.github.io
-# 3dfixup.github.io
-# 3dfixup.github.io
+# 3D-Fixup: Advancing Photo Editing with 3D Priors
