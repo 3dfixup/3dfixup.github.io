@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="3D-Fixup">
+  <meta property="og:title" content="3D-Fixup"/>
+  <meta property="og:description" content="3D Fixup"/>
+  <meta property="og:url" content="https://3dfixup.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="sliders/illum_car_0.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- latex symbols -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+
+  <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG"> -->
+  <!-- <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png"> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+  <title>3D-Fixup</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">3D-Fixup: Advancing Photo Editing with <br> 3D Priors</h1>
+              <h2> <font size="+2.5"> SIGGRAPH 2025 </font></h1>
+                <br>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://yccyenchicheng.github.io/" target="_blank">Yen-Chi Cheng</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://krsingh.cs.ucdavis.edu/" target="_blank">Krishna Kumar Singh</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://gorokee.github.io/jsyoon/" target="_blank">Jae Shin Yoon</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.alexander-schwing.de/" target="_blank">Alex Schwing</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://lgui.web.illinois.edu/" target="_blank">Liang-Yan Gui</a><sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="http://mgadelha.me/" target="_blank">Matheus Gadelha</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://paulguerrero.net/" target="_blank">Paul Guerrero</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://nxzhao.com/" target="_blank">Nanxuan Zhao</a><sup>2</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>UIUC<br><sup>2</sup>Adobe Research</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Work done during internship at Adobe Research</small></span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="xxx.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                  <!-- Github link -->
+
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2504.xxxxx" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4"
+        type="video/mp4"> -->
+        <!-- <video controls autoplay muted loop>
+            <source src="static/videos/teaser_vid.mp4" type="video/mp4">
+        </video> -->
+        <img src="static/images/0-teaser-v4-out.jpg" alt="3D-Fixup Overview"/>
+
+          <!-- <video controls loop>
+            <source src="static/images/teaser_vid.mov">
+            Your browser does not support the video tag.
+          </video> -->
+      <!-- </video> -->
+      <h2 class="subtitle has-text-centered">
+        <b>TL;DR:</b> We enable feedfoward 3D-aware editing method <em>3D-Fixup</em> by proposing a data pipeline and a conditional diffusion model.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite significant advances in modeling image priors via diffusion models,
+            3D-aware image editing remains challenging, in part because the object is
+            only specified via a single image. To tackle this challenge, we propose 3D-
+            Fixup, a new framework for editing 2D images guided by learned 3D priors.
+            The framework supports difficult editing situations such as object translation
+            and 3D rotation. To achieve this, we leverage a training-based approach that
+            harnesses the generative power of diffusion models. As video data naturally
+            encodes real-world physical dynamics, we turn to video data for generating
+            training data pairs, i.e., a source and a target frame. Rather than relying
+            solely on a single trained model to infer transformations between source
+            and target frames, we incorporate 3D guidance from an Image-to-3D model,
+            which bridges this challenging task by explicitly projecting 2D information
+            into 3D space. We design a data generation pipeline to ensure high-quality
+            3D guidance throughout training. Results show that by integrating these
+            3D priors, 3D-Fixup effectively supports complex, identity coherent 
+            3D-aware edits, achieving high-quality results and advancing the application of
+            diffusion models in realistic image manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Youtube video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+
+      <h2 class="title is-3">Results</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <!-- <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           -->
+
+          <h2 class="title is-4">3D Editing with 3D Rotation</h2>
+          <td>
+            <div style="text-align: center;">
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-rabbit-ref" src="sliders/rabbit/80-MF-1-img_ref.png" alt="rabbit ref" style="width: 300px; height: auto;">
+                <!-- <figcaption>Source image \( I_\text{src} \) </figcaption> -->
+                <figcaption>Source image</figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-rabbit-wire" src="sliders/rabbit/80-MF-2-img_guide_wire.png" alt="rabbit wire" style="width: 300px; height: auto;">
+                <figcaption>
+                  <!-- <label for="slider-butterfly">Value: <span id="butterfly-value">80</span></label> -->
+                  3D edits <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-rabbit" min="10" max="160" step="10" value="80" oninput="document.getElementById('butterfly-value').textContent = this.value;">
+                </figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-rabbit-gen" src="sliders/rabbit/80-MF-6-samples-0.png" alt="rabbit gen" style="width: 300px; height: auto;">
+                <figcaption>Output</figcaption>
+              </figure>
+
+            <!-- <img id="image-rabbit-ref" src="sliders/rabbit/80-MF-1-img_ref.png" alt="Rabbit ref" style="width: 300px; height: auto;">
+            <img id="image-rabbit-wire" src="sliders/rabbit/80-MF-2-img_guide_wire.png" alt="Rabbit wire" style="width: 300px; height: auto;">
+            <img id="image-rabbit-gen" src="sliders/rabbit/80-MF-6-samples-0.png" alt="Rabbit gen"  style="width: 300px; height: auto;">
+            <br>
+            <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-rabbit" min="10" max="160" step="10" value="80">
+            <p style="font-family: Courier; font-size: 12px;">Rabbit</p> -->
+            </div>
+          </td>
+
+          <!-- tower -->
+          <td>
+            <div style="text-align: center;">
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-tower-ref" src="sliders/tower/80-MF-1-img_ref.png" alt="tower ref" style="width: 300px; height: auto;">
+                <!-- <figcaption>Source image \( I_\text{src} \) </figcaption> -->
+                <figcaption>Source image</figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-tower-wire" src="sliders/tower/80-MF-2-img_guide_wire.png" alt="tower wire" style="width: 300px; height: auto;">
+                <figcaption>
+                  <!-- <label for="slider-butterfly">Value: <span id="butterfly-value">80</span></label> -->
+                  3D edits <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-tower" min="80" max="160" step="10" value="80" oninput="document.getElementById('butterfly-value').textContent = this.value;">
+                </figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-tower-gen" src="sliders/tower/80-MF-6-samples-0.png" alt="tower gen" style="width: 300px; height: auto;">
+                <figcaption>Output</figcaption>
+              </figure>
+
+
+            <!-- <img id="image-tower-ref" src="sliders/tower/80-MF-1-img_ref.png" alt="Tower ref" style="width: 300px; height: auto;">
+            <img id="image-tower-wire" src="sliders/tower/80-MF-2-img_guide_wire.png" alt="Tower wire" style="width: 300px; height: auto;">
+            <img id="image-tower-gen" src="sliders/tower/80-MF-6-samples-0.png" alt="Tower gen"  style="width: 300px; height: auto;">
+            <br>
+            <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-tower" min="10" max="160" step="10" value="80">
+            <p style="font-family: Courier; font-size: 12px;">A [<img src="logos/icon_illumination.png" alt="Illumination Icon" style="width: 20px; height: 20px; vertical-align: middle;">] Tower.</p> -->
+
+
+            </div>
+          </td>
+
+          <!-- butterfly -->
+          <td>
+            <div style="text-align: center;">
+            <figure style="display: inline-block; text-align: center; margin: 2px;">
+              <img id="image-butterfly-ref" src="sliders/butterfly/80-MF-1-img_ref.png" alt="Butterfly ref" style="width: 300px; height: auto;">
+              <!-- <figcaption>Source image \( I_\text{src} \) </figcaption> -->
+              <figcaption>Source image</figcaption>
+            </figure>
+
+            <figure style="display: inline-block; text-align: center; margin: 2px;">
+              <img id="image-butterfly-wire" src="sliders/butterfly/80-MF-2-img_guide_wire.png" alt="Butterfly wire" style="width: 300px; height: auto;">
+              <figcaption>
+                <!-- <label for="slider-butterfly">Value: <span id="butterfly-value">80</span></label> -->
+                3D edits <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-butterfly" min="10" max="160" step="10" value="80" oninput="document.getElementById('butterfly-value').textContent = this.value;">
+              </figcaption>
+            </figure>
+
+            <figure style="display: inline-block; text-align: center; margin: 2px;">
+              <img id="image-butterfly-gen" src="sliders/butterfly/80-MF-6-samples-0.png" alt="Butterfly gen" style="width: 300px; height: auto;">
+              <figcaption>Output</figcaption>
+            </figure>
+
+            <!-- <img id="image-butterfly-ref" src="sliders/butterfly/80-MF-1-img_ref.png" alt="Fish ref" style="width: 300px; height: auto;">
+            <img id="image-butterfly-wire" src="sliders/butterfly/80-MF-2-img_guide_wire.png" alt="Fish wire" style="width: 300px; height: auto;">
+            <img id="image-butterfly-gen" src="sliders/butterfly/80-MF-6-samples-0.png" alt="Fish gen"  style="width: 300px; height: auto;">
+            <br>
+            <label for="slider-butterfly">Value: <span id="butterfly-value">80</span></label>
+            <br>
+            3D edits <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-butterfly" min="10" max="160" step="10" value="80" oninput="document.getElementById('butterfly-value').textContent = this.value;">
+            <p>Butterfly</p> -->
+            
+
+            </div>
+          </td>
+
+          <!-- pig -->
+          <!-- <td>
+            <div style="text-align: center;">
+            <img id="image-pig-ref" src="sliders/pig/80-MF-1-img_ref.png" alt="Pig ref" style="width: 300px; height: auto;">
+            <img id="image-pig-wire" src="sliders/pig/80-MF-2-img_guide_wire.png" alt="Pig wire" style="width: 300px; height: auto;">
+            <img id="image-pig-gen" src="sliders/pig/80-MF-6-samples-0.png" alt="Pig gen"  style="width: 300px; height: auto;">
+            <br>
+            <label for="slider-pig">Value: <span id="pig-value">80</span></label>
+            <br> -->
+            <!-- <img src="logos/icon_illumination.png" alt="Illumination Icon" style="width: 20px; height: 20px; vertical-align: middle;"> <input type="range" id="slider-pig" min="10" max="160" step="10" value="80"> -->
+            <!-- <img src="logos/icon_illumination.png" alt="Illumination Icon" style="width: 20px; height: 20px; vertical-align: middle;"> <input type="range" id="slider-pig" min="10" max="160" step="10" value="80" oninput="document.getElementById('pig-value').textContent = this.value;">
+            <p style="font-family: Courier; font-size: 12px;">A [<img src="logos/icon_illumination.png" alt="Illumination Icon" style="width: 20px; height: 20px; vertical-align: middle;">] Pig.</p>
+            </div>
+          </td> -->
+
+          <!-- fish -->
+          <td>
+            <div style="text-align: center;">
+
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-fish-ref" src="sliders/fish/80-MF-1-img_ref.png" alt="fish ref" style="width: 300px; height: auto;">
+                <!-- <figcaption>Source image \( I_\text{src} \) </figcaption> -->
+                <figcaption>Source image</figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-fish-wire" src="sliders/fish/80-MF-2-img_guide_wire.png" alt="fish wire" style="width: 300px; height: auto;">
+                <figcaption>
+                  <!-- <label for="slider-butterfly">Value: <span id="butterfly-value">80</span></label> -->
+                  3D edits <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-fish" min="10" max="160" step="10" value="80" oninput="document.getElementById('butterfly-value').textContent = this.value;">
+                </figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-fish-gen" src="sliders/fish/80-MF-6-samples-0.png" alt="fish gen" style="width: 300px; height: auto;">
+                <figcaption>Output</figcaption>
+              </figure>
+
+            <!-- <img id="image-fish-ref" src="sliders/fish/80-MF-1-img_ref.png" alt="Fish ref" style="width: 300px; height: auto;">
+            <img id="image-fish-wire" src="sliders/fish/80-MF-2-img_guide_wire.png" alt="Fish wire" style="width: 300px; height: auto;">
+            <img id="image-fish-gen" src="sliders/fish/80-MF-6-samples-0.png" alt="Fish gen"  style="width: 300px; height: auto;">
+            <br>
+            <label for="slider-fish">Value: <span id="fish-value">80</span></label>
+            <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-fish" min="10" max="160" step="10" value="80" oninput="document.getElementById('fish-value').textContent = this.value;">
+            <p style="font-family: Courier; font-size: 12px;">Fish</p> -->
+            </div>
+          </td>
+
+          <!-- shoe -->
+          <td>
+            <div style="text-align: center;">
+
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-shoe-ref" src="sliders/shoe/80-MF-1-img_ref.png" alt="shoe ref" style="width: 300px; height: auto;">
+                <!-- <figcaption>Source image \( I_\text{src} \) </figcaption> -->
+                <figcaption>Source image</figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-shoe-wire" src="sliders/shoe/80-MF-2-img_guide_wire.png" alt="shoe wire" style="width: 300px; height: auto;">
+                <figcaption>
+                  <!-- <label for="slider-butterfly">Value: <span id="butterfly-value">80</span></label> -->
+                  3D edits <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-shoe" min="10" max="160" step="10" value="80" oninput="document.getElementById('butterfly-value').textContent = this.value;">
+                </figcaption>
+              </figure>
+  
+              <figure style="display: inline-block; text-align: center; margin: 2px;">
+                <img id="image-shoe-gen" src="sliders/shoe/80-MF-6-samples-0.png" alt="shoe gen" style="width: 300px; height: auto;">
+                <figcaption>Output</figcaption>
+              </figure>
+
+            <!-- <img id="image-shoe-ref" src="sliders/shoe/80-MF-1-img_ref.png" alt="Shoe ref" style="width: 300px; height: auto;">
+            <img id="image-shoe-wire" src="sliders/shoe/80-MF-2-img_guide_wire.png" alt="Shoe wire" style="width: 300px; height: auto;">
+            <img id="image-shoe-gen" src="sliders/shoe/80-MF-6-samples-0.png" alt="Shoe gen"  style="width: 300px; height: auto;">
+            <br>
+            <label for="slider-shoe">Value: <span id="shoe-value">80</span></label>
+            <img src="static/images/proj-rotation-icon.png" alt="Rotation Icon" style="width: 50px; height: auto; vertical-align: middle;"> <input type="range" id="slider-shoe" min="10" max="160" step="10" value="80" oninput="document.getElementById('shoe-value').textContent = this.value;">
+            <p style="font-family: Courier; font-size: 12px;">Shoe</p> -->
+            </div>
+          </td>
+
+          <!-- boat -->
+          <!-- <td>
+            <div style="text-align: center;">
+            <img id="image-boat-ref" src="sliders/boat/80-MF-1-img_ref.png" alt="Boat ref" style="width: 300px; height: auto;">
+            <img id="image-boat-wire" src="sliders/boat/80-MF-2-img_guide_wire.png" alt="Boat wire" style="width: 300px; height: auto;">
+            <img id="image-boat-gen" src="sliders/boat/80-MF-6-samples-0.png" alt="Boat gen"  style="width: 300px; height: auto;">
+            <br>
+            <img src="logos/icon_illumination.png" alt="Illumination Icon" style="width: 20px; height: 20px; vertical-align: middle;"> <input type="range" id="slider-boat" min="10" max="160" step="10" value="80">
+            <p style="font-family: Courier; font-size: 12px;">A [<img src="logos/icon_illumination.png" alt="Illumination Icon" style="width: 20px; height: 20px; vertical-align: middle;">] Boat.</p>
+            </div>
+          </td> -->
+
+          <br><br>
+          <h2 class="title is-4">Comparison with Baselines</h2>
+          <table border="0">
+
+               <!-- Wing Pose Row -->
+               <tr>
+                 <td>
+                     <img id="image-comp_baselines" src="static/images/3-qual-comp-baselines-v2-out.jpg" alt="Comp baselines">
+                     <div class="content has-text-justified">
+                     <p><b>Comparison with baselines.</b> We compare several state of the art baselines with different kinds of conditions, such as 3D transforms, drags, inpainting
+                      masks, and text prompts. We can see that none of the baselines accurately follow the target 3D transform while preserving identity. Baselines that directly use
+                      3D transforms suffer from a lack of good training data, and using other types of conditions makes it hard to unambiguously specify the 3D transform.</p>
+                    </div>
+                 </td>
+               </tr>
+
+
+          </table>
+          <br><br>
+
+          <h2 class="title is-4">Comparison with <a href="https://github.com/TencentARC/InstantMesh">Magic Fixup [AlZayer et al. 2024]</a></h2>
+            <table border="0" style="margin-left: auto; margin-right: auto; width: 70%;">
+              <tr>
+                  <img id="image-comp_mf" src="static/images/3-qual-comp-mf-v2-out.jpg" style="width: 800px; height: auto;" alt="Comparison with MF">
+                  <div class="content has-text-justified">
+                  <p><b>Comparison with Magic Fixup.</b> The results demonstrate that the proposed method achieves more realistic outputs 
+                    by leveraging the 3D-transformation based guidance. For instance, our method effectively handles pose changes, such as adjusting the camera's viewing 
+                    direction for the cakes and jaguar, or modifying the poses of the horse and parrot.</p>
+                  </div>
+              </tr>
+            </table>
+
+           <script>
+               // JavaScript code will go here
+               // Function to update the image source
+           function updateImage(sliderId, imageId, baseName) {
+               // illumination_strings = ["taxis_", "lions_8_", "car_10_", "tiger_10_", "table_10_"]
+               // var sliderValue = 0;
+               // console.log(baseName)
+               // if(illumination_strings.includes(baseName)){
+                 // /sliderValue = 14 + 27 - document.getElementById(sliderId).value;
+               // }/
+               // else if(baseName=="vacuum_10_"){
+                 // sliderValue = 16 + 27 - document.getElementById(sliderId).value;
+               // }
+               // else{
+                 sliderValue = document.getElementById(sliderId).value;
+               // }
+               // if(baseName.includes(dollyzoom))
+              //  var newImagePath = "sliders/" + baseName + sliderValue + ".png";
+
+              var newWireframePath = "sliders/" + baseName + "/" + sliderValue + "-MF-2-img_guide_wire.png";
+              var newImagePath = "sliders/" + baseName + "/" + sliderValue + "-MF-6-samples-0.png";
+               // console.log(newImagePath) // Adjust this path as per your images
+
+              wireframe_id = imageId + "-wire";
+              // change the wireframe images
+              document.getElementById(wireframe_id).src = newWireframePath;
+
+              // change the generated images
+              image_gen_id = imageId + "-gen";
+              document.getElementById(image_gen_id).src = newImagePath;
+           }
+
+           // Attach event listeners to each slider
+
+           function updateMultiConceptImage(baseId, baseName) {
+               var sliderValueA = document.getElementById(baseId + "a").value;
+
+               illumination_strings = ["horses", "bear"]
+               var sliderValueB = 0;
+               // console.log(baseName)
+               if(illumination_strings.includes(baseName)){
+                 sliderValueB = 14 + 27 - document.getElementById(baseId + "b").value;
+               }
+               else{
+                 sliderValueB = document.getElementById(baseId + "b").value;
+               }
+
+               // var sliderValueB = document.getElementById(baseId + "b").value;
+               var newImagePath = "supp/" + baseName + "_" + sliderValueA + "_" + sliderValueB + ".png";
+               // console.log("image-" + baseId) // Adjust this path as per your images
+               document.getElementById("image-" + baseName).src = newImagePath;
+           }
+
+           function attachMultiConceptSliderEvents(baseId, baseName) {
+               var sliderA = document.getElementById("slider-" + baseId + "a");
+               var sliderB = document.getElementById("slider-" + baseId + "b");
+
+               sliderA.addEventListener("input", function() {
+                   updateMultiConceptImage("slider-" + baseId, baseName);
+               });
+
+               sliderB.addEventListener("input", function() {
+                   updateMultiConceptImage("slider-" + baseId, baseName);
+               });
+           }
+           function attachSliderEvents() {
+              var sliders = ["rabbit", "butterfly", "fish", "shoe",
+                             "tower", "pig", "boat",
+                            ];
+
+              //  sliders.forEach(function(slider) {
+              //      document.getElementById("slider-" + slider).addEventListener("input", function() {
+              //          updateImage("slider-" + slider, "image-" + slider, slider + "_");
+              //      });
+              //  });
+               sliders.forEach(function(slider) {
+                   document.getElementById("slider-" + slider).addEventListener("input", function() {
+                       updateImage("slider-" + slider, "image-" + slider, slider);
+                   });
+               });
+
+               // attachMultiConceptSliderEvents("horses", "horses");
+               attachMultiConceptSliderEvents("bear", "bear");
+               attachMultiConceptSliderEvents("seagull", "seagull");
+           }
+           document.addEventListener("DOMContentLoaded", attachSliderEvents);
+
+           // Initialize the sliders once the window is loaded
+           window.onload = attachSliderEvents;
+
+           </script>
+
+
+          <!-- </div> -->
+        </div>
+        <!-- <div class="column is-four-fifths">
+          <img src="static/images/results.pdf" alt="3DMiner Overview"/>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+
+<!-- Image carousel -->
+
+<!-- End image carousel -->
+
+
+<!-- Youtube video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Method Overview</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+          <!-- <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           -->
+          
+          <h2 class="title is-4">Data Pipeline</h2>
+          <img src="static/images/2-overview-dp-part1-v1-out.jpg" alt="Data Pipeline Overview"/>
+          <!-- <img src="static/images/2-overview-dp-part2-v1-out.jpg" alt="Data Pipeline Overview"/> -->
+          <div class="content has-text-justified">
+            <p>
+            Given a video, we sample two frames, the source frame \( I_{\text{src}} \) src and the target frame \( I_{\text{tgt}} \), using optical flow as a cue: we discard
+            videos where the flow indicates little motion through the entire clip. Using Image-to-3D methods, we reconstruct a mesh for the desired object for both frames.
+            We then estimate the 3D transformation \(T\) (see Figure 4) between the source frame mesh and the target frame mesh. Availability of the transformation \(T\)
+            enables two ways to create the training data: (1) in "Transform Source", we paste the rendering of the transformed source mesh onto the target frame; (2) in
+            "Transform Target", we paste the rendering of the target mesh onto the source frame.
+            </p>
+          </div>
+          <!-- <img src="static/images/2-overview-dp-part2-v1-out.jpg" alt="Data Pipeline: "/> -->
+          <!-- <img src="static/images/2-overview-model-v5-out.jpg" style="width: 500px; height: auto;" alt="Model Overview"/> -->
+          <!-- <img src="static/images/2-inference-v3-out.jpg" style="width: 500px; height: auto;" alt="Model Overview"/> -->
+          <!-- <img src="static/images/A-proj-model-inference-v0-out.jpg" style="width: 500px; height: auto;" alt="Model Overview"/> -->
+          <h2 class="title is-4">Model Overview</h2>
+          <img src="static/images/A-proj-model-inference-v0-out.jpg" alt="Model Overview"/>
+          <div class="content has-text-justified">
+            <p>
+            <!-- <b>Model:</b> -->
+            <em>(Left) Overview of the training pipeline</em>. We develop a conditional diffusion model for 3D-aware image editing.
+            It consists of two networks: \(f_\text{gen}\) and \(f_\text{detail}\) During training, given the inputs—target frame \(I_\text{tgt}\), 3D guidance
+            \(I_\text{guide}\), mask \(M_\text{guide}\), and detail features \(F_\text{t}\)--\(f_\text{gen}\) learns the reverse diffusion process to predict 
+            the noise \(\epsilon\) and reconstruct \(I_\text{tgt}\).
+            To better preserve identity and fine-grained details from the source image \(I_\text{src}\), \(f_\text{detail}\) takes as input
+            the source image \(I_\text{src}\), its noisy counterpart \(I_\text{t}\) , and the mask \(M_\text{guide}\), and extracts 
+            detail features \(F_\text{t}\). We apply cross-attention between \(F_\text{t}\) and the intermediate features of \(f_\text{gen}\)
+            to incorporate content and details from \(I_\text{src}\) during the reverse diffusion process.
+            <br><br>
+            <em>(Right) Inference.</em> We assume editing instructions (possibly converted from text prompts) are in the form of 3D operations like rotation
+            and translation. Given a mask indicating the object to be edited, we first perform image-to-3D <a href="https://github.com/TencentARC/InstantMesh">(InstantMesh [Xu et al. 2024])</a>
+            to reconstruct the mesh. We then apply the user's desired 3D edit to obtain the 3D guidance. Here the 3D edit
+            is visualized as the transformation between original mesh (<span style="color:pink;"><em>pink wire-frame</em></span>) and
+            the edited mesh (<span style="color:cyan;"><em>cyan wire-frame</em></span>). Finally, the model outputs the 3D aware editing result.
+            </p>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{cheng20253d,
+        author    = {Yen-Chi Cheng and Krishna Kumar Singh and Jae Shin Yoon and Alexander Schwing and Liangyan Gui and Matheus Gadelha and Paul Guerrero and Nanxuan Zhao},
+        title     = {{3D-Fixup: Advancing Photo Editing with 3D Priors}},
+        booktitle = {Proceedings of the SIGGRAPH Conference Papers},
+        year      = {2025},
+        isbn      = {979-8-4007-1540-2/2025/08},
+        publisher = {ACM},
+        doi       = {10.1145/3721238.3730695},
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

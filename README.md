@@ -1,1 +1,2 @@
-# 3D-Fixup: Advancing Photo Editing with 3D Priors
+# 3D-Fixup
+Project page for 3D-Fixup.
